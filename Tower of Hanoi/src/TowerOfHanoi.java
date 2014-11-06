@@ -13,13 +13,16 @@ public class TowerOfHanoi
 
 	   if ( nDisks == 1 )
 		   {
+		   System.out.println("base case");
 		   return fromPeg + " -> " + toPeg + "\n";
 		   }
 	   
 	   else
 		   {
+		   System.out.println("else section");
 		   helpPeg = 6 - fromPeg - toPeg;
 		   Sol1 = hanoi(nDisks-1, fromPeg, helpPeg);
+		   System.out.println("between calls");
 		   myStep = fromPeg + " -> " + toPeg + "\n";
 		   Sol2 = hanoi(nDisks-1, helpPeg, toPeg);
 
